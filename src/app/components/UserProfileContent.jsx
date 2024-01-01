@@ -63,7 +63,7 @@ const Profile = ({ data }) => {
                         id="name"
                         readOnly
                         placeholder={fullname}
-                        className={`${styles.input} w-full`}
+                        className={`${styles.input} w-full outline-none`}
                     />
                 </div>
 
@@ -75,7 +75,7 @@ const Profile = ({ data }) => {
                         id="email"
                         readOnly
                         placeholder={email}
-                        className={`${styles.input} w-full`}
+                        className={`${styles.input} w-full outline-none`}
                     />
                 </div>
                 <div>
@@ -86,7 +86,7 @@ const Profile = ({ data }) => {
                         id="phone"
                         readOnly
                         placeholder={phone}
-                        className={`${styles.input} w-full`}
+                        className={`${styles.input} w-full outline-none`}
                     />
                 </div>
             </div>
@@ -184,27 +184,27 @@ const Dashboard = () => {
 
     return (
        <div className="w-full h-full flex justify-center items-center">
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="flex flex-col justify-center items-center w-48 h-28 md:h-40 lg:h-48 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-2xl rounded-md">
                 <p>{biodata.length}</p>
                 <p>Marriage Post</p>
             </div>
-            <div className="flex flex-col justify-center items-center w-48  h-28 md:h-40 lg:h-48 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 text-white font-semibold text-2xl rounded-md">
+            {/* <div className="flex flex-col justify-center items-center w-48  h-28 md:h-40 lg:h-48 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 text-white font-semibold text-2xl rounded-md">
                 <p>{rent.length}</p>
                 <p>H.O.S Post</p>
-            </div>
-            <div className="flex flex-col justify-center items-center w-48  h-28 md:h-40 lg:h-48 bg-gradient-to-r from-indigo-500  to-emerald-500 text-white font-semibold text-2xl rounded-md">
+            </div> */}
+            {/* <div className="flex flex-col justify-center items-center w-48  h-28 md:h-40 lg:h-48 bg-gradient-to-r from-indigo-500  to-emerald-500 text-white font-semibold text-2xl rounded-md">
                 <p>{sales.length}</p>
                 <p>L.B.O Post</p>
-            </div>
+            </div> */}
             <div className="flex flex-col justify-center w-48  h-28 md:h-40 lg:h-48 items-center bg-gradient-to-r from-pink-500 to-yellow-500 text-white font-semibold text-2xl rounded-md">
                 <p>{vehicles.length}</p>
                 <p>Vehicles Post</p>
             </div>
-            <div className="flex flex-col justify-center items-center w-48  h-28 md:h-40 lg:h-48 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold text-2xl rounded-md">
+            {/* <div className="flex flex-col justify-center items-center w-48  h-28 md:h-40 lg:h-48 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold text-2xl rounded-md">
                 <p>{products.length}</p>
                 <p>Product Post</p>
-            </div>
+            </div> */}
         </div>
        </div>
     )

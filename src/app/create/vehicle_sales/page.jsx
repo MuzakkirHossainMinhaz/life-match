@@ -99,7 +99,7 @@ const VehicleSales = () => {
             </Link>
             <div>
                 <h2 className="text-xl md:text-2xl lg:text-3xl font-medium lg:font-semibold text-center mt-2">
-                    Add Vehicle Data for Sales
+                    Add Vehicle Data for Rent
                 </h2>
             </div>
             <div className="mt-4">

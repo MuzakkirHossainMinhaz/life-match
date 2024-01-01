@@ -39,7 +39,7 @@ const Footer = () => {
             <div className="flex justify-between items-center py-4 px-4 md:px-7 lg:px-10">
                 <div>
                     <h1 className="text-blue-500 text-sm">
-                        Copyright 2023 ©️ Sazzad Hossen.
+                        Copyright 2023 
                         <br />
                         All Rights Reserved.
                     </h1>
