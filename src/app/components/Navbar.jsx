@@ -29,7 +29,7 @@ const Navbar = () => {
                 <div>
                     <Link href="/" shallow>
                         <span className="cursor-pointer font-bold text-xl md:text-2xl lg:text-3xl text-white">
-                            LifeMatch
+                            BrideGroom
                         </span>
                     </Link>
                 </div>
