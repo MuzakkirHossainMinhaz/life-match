@@ -282,6 +282,7 @@ const Biodata = ({ email }) => {
             });
     };
 
+    console.log(request)
     return (
         <div>
             {!open && (
@@ -341,7 +342,7 @@ const Biodata = ({ email }) => {
                                         <table className="table w-full">
                                             <tr className="table-row">
                                                 <th>#</th>
-                                                <th>Sender Bio</th>
+                                                <th>Sender</th>
                                                 <th>Action</th>
                                             </tr>
                                             {request
@@ -349,7 +350,7 @@ const Biodata = ({ email }) => {
                                                 .map((req, idx) => (
                                                     <tr key={idx} className="table-row text-center">
                                                         <td>{idx + 1}</td>
-                                                        <td className="uppercase">{req.sender_bio}</td>
+                                                        <td className="lowercase">{req.sender}</td>
                                                         <td className="flex gap-2 justify-center">
                                                             <p
                                                                 className="bg-green-600 px-4 py-1 rounded-md text-white cursor-pointer"

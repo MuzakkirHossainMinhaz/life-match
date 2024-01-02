@@ -9,6 +9,7 @@ import { RxCross1 } from "react-icons/rx";
 import { styles } from "@/app/styles/styles";
 import { Country, State, City } from "country-state-city";
 import { BiFilter } from "react-icons/bi";
+import toast from "react-hot-toast";
 
 const MarriageBiodata = () => {
     const [biodata, setBiodata] = useState([]);
@@ -93,7 +94,7 @@ const MarriageBiodata = () => {
         axios
             .post("/api/request/register", data)
             .then(() => {
-                toast.success("Sent request succesfully!");
+                toast.success("Sent request successfully!");
                 setLoading(false);
             })
             .catch((error) => {
