@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
@@ -159,7 +160,7 @@ const Hero = () => {
                         <h1 className="text-2xl font-semibold mt-4 md:mt-0 mb-2 md:mb-0">Marriage</h1>
                         <p className="text-justify">
 
-                            Marriage, an age-old institution, weaves two souls into a tapestry of shared dreams and aspirations. It's more than a union of hearts; it's a commitment to weather life's storms hand in hand. Through peaks and valleys, marriages evolve, nurturing trust, understanding, and profound companionship. Each promise exchanged is a beacon of hope, anchoring souls in a bond of enduring love. Yet, like any journey, it demands patience, compromise, and unwavering support. In the dance of life, marriage stands as a testament to the human spirit's quest for connection, reminding us that together, we are stronger, wiser, and infinitely more resilient.
+                            Marriage, an age-old institution, weaves two souls into a tapestry of shared dreams and aspirations. It&apos;s more than a union of hearts; it&apos;s a commitment to weather life&apos;s storms hand in hand. Through peaks and valleys, marriages evolve, nurturing trust, understanding, and profound companionship. Each promise exchanged is a beacon of hope, anchoring souls in a bond of enduring love. Yet, like any journey, it demands patience, compromise, and unwavering support. In the dance of life, marriage stands as a testament to the human spirit&apos;s quest for connection, reminding us that together, we are stronger, wiser, and infinitely more resilient.
                         </p>
                         {data ? <Link href="category/marriage-s-d">
                             <button className={`${styles.button} !mt-3 md:max-w-xs`}>Visit More</button>
@@ -180,7 +181,7 @@ const Hero = () => {
                     <div className="text-neutral-800 basis-2/3">
                         <h1 className="text-2xl font-semibold mt-4 md:mt-0 mb-2 md:mb-0">Car Booking</h1>
                         <p className="text-justify">
-                            Appointing a car for one's needs offers a blend of convenience and flexibility. Whether for a special occasion, a business trip, or simply to navigate unfamiliar terrains, a hired car bridges the gap between destinations and desires. With a myriad of options, from compact sedans to luxurious SUVs, one can tailor the choice to fit specific requirements. Beyond mere transportation, appointing a car can elevate experiences, allowing travelers to explore at their own pace and in their preferred style. In the realm of modern mobility, the freedom and autonomy a hired car bestows are invaluable, transforming journeys into memorable adventures.
+                            Appointing a car for one&apos;s needs offers a blend of convenience and flexibility. Whether for a special occasion, a business trip, or simply to navigate unfamiliar terrains, a hired car bridges the gap between destinations and desires. With a myriad of options, from compact sedans to luxurious SUVs, one can tailor the choice to fit specific requirements. Beyond mere transportation, appointing a car can elevate experiences, allowing travelers to explore at their own pace and in their preferred style. In the realm of modern mobility, the freedom and autonomy a hired car bestows are invaluable, transforming journeys into memorable adventures.
                         </p>
                         {data ? <Link href="category/vehicle-sales">
                             <button className={`${styles.button} !mt-3 md:max-w-xs`}>Visit More</button>
