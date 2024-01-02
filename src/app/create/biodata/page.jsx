@@ -97,7 +97,7 @@ const Biodata = () => {
         axios
             .post("/api/biodata/register", data)
             .then(() => {
-                toast.success("Biodata has been registered!");
+                toast.success("Biodata has been registered! Wait for some time for Admin's approval.");
                 setLoading(false);
                 router.push("/create", undefined, { shallow: true });
             })

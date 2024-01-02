@@ -33,25 +33,29 @@ const Navbar = () => {
                         </span>
                     </Link>
                 </div>
-                <div className="hidden md:flex gap-6">
-                    {categories.map((category, index) => (
-                        <Link
-                            shallow
-                            key={index}
-                            href={`/category/${category.slug}`}
-                            className="flex flex-col items-center text-white gap-1"
-                        >
-                            <span>{category.icon}</span>
-                            <span className="text-white md:font-medium text-center lg:font-semibold text-sm lg:text-base cursor-pointer">
-                                {category.name}
-                            </span>
-                        </Link>
-                    ))}
+
+                <div>
+                    {data && <div className="hidden md:flex gap-6">
+                        {categories.map((category, index) => (
+                            <Link
+                                shallow
+                                key={index}
+                                href={`/category/${category.slug}`}
+                                className="flex flex-col items-center text-white gap-1"
+                            >
+                                <span>{category.icon}</span>
+                                <span className="text-white md:font-medium text-center lg:font-semibold text-sm lg:text-base cursor-pointer">
+                                    {category.name}
+                                </span>
+                            </Link>
+                        ))}
+                    </div>}
                 </div>
 
                 <div>
                     {data && (
                         <div className="flex gap-3 items-center">
+
                             {data.isVerified && (
                                 <Link
                                     href="/create"

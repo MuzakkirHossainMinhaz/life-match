@@ -86,7 +86,7 @@ const VehicleSales = () => {
             .then(() => {
                 router.push("/create", undefined, { shallow: true });
                 setLoading(false);
-                toast.success("Vehicle data has been registered!");
+                toast.success("Vehicle data has been registered! Wait for some time for Admin's approval.");
             })
             .catch(() => toast.error("Something went wrong!"));
         setLoading(false);

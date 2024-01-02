@@ -13,6 +13,20 @@ const Hero = () => {
     const [users, setUsers] = useState([]);
 
     const [loading, setLoading] = useState(true);
+    const [data, setData] = useState();
+
+    const getUserDetails = async () => {
+        try {
+            const res = await axios.get("/api/users/me");
+            setData(res.data.data);
+        } catch (error) {
+            console.error("Error fetching data:", error);
+        }
+    };
+
+    useEffect(() => {
+        getUserDetails();
+    }, []);
 
 
 
@@ -95,7 +109,7 @@ const Hero = () => {
             });
     }, []);
 
-    
+
     return (
         <div>
             <div>
@@ -144,12 +158,14 @@ const Hero = () => {
                     <div className="text-neutral-800 basis-2/3">
                         <h1 className="text-2xl font-semibold mt-4 md:mt-0 mb-2 md:mb-0">Marriage</h1>
                         <p className="text-justify">
-                           
-Marriage, an age-old institution, weaves two souls into a tapestry of shared dreams and aspirations. It's more than a union of hearts; it's a commitment to weather life's storms hand in hand. Through peaks and valleys, marriages evolve, nurturing trust, understanding, and profound companionship. Each promise exchanged is a beacon of hope, anchoring souls in a bond of enduring love. Yet, like any journey, it demands patience, compromise, and unwavering support. In the dance of life, marriage stands as a testament to the human spirit's quest for connection, reminding us that together, we are stronger, wiser, and infinitely more resilient.
+
+                            Marriage, an age-old institution, weaves two souls into a tapestry of shared dreams and aspirations. It's more than a union of hearts; it's a commitment to weather life's storms hand in hand. Through peaks and valleys, marriages evolve, nurturing trust, understanding, and profound companionship. Each promise exchanged is a beacon of hope, anchoring souls in a bond of enduring love. Yet, like any journey, it demands patience, compromise, and unwavering support. In the dance of life, marriage stands as a testament to the human spirit's quest for connection, reminding us that together, we are stronger, wiser, and infinitely more resilient.
                         </p>
-                        <Link href="category/marriage-s-d">
+                        {data ? <Link href="category/marriage-s-d">
                             <button className={`${styles.button} !mt-3 md:max-w-xs`}>Visit More</button>
-                        </Link>
+                        </Link> : <Link href="/login">
+                            <button className={`${styles.button} !mt-3 md:max-w-xs`}>Visit More</button>
+                        </Link>}
                     </div>
                 </div>
 
@@ -164,11 +180,13 @@ Marriage, an age-old institution, weaves two souls into a tapestry of shared dre
                     <div className="text-neutral-800 basis-2/3">
                         <h1 className="text-2xl font-semibold mt-4 md:mt-0 mb-2 md:mb-0">Car Booking</h1>
                         <p className="text-justify">
-                        Appointing a car for one's needs offers a blend of convenience and flexibility. Whether for a special occasion, a business trip, or simply to navigate unfamiliar terrains, a hired car bridges the gap between destinations and desires. With a myriad of options, from compact sedans to luxurious SUVs, one can tailor the choice to fit specific requirements. Beyond mere transportation, appointing a car can elevate experiences, allowing travelers to explore at their own pace and in their preferred style. In the realm of modern mobility, the freedom and autonomy a hired car bestows are invaluable, transforming journeys into memorable adventures.
+                            Appointing a car for one's needs offers a blend of convenience and flexibility. Whether for a special occasion, a business trip, or simply to navigate unfamiliar terrains, a hired car bridges the gap between destinations and desires. With a myriad of options, from compact sedans to luxurious SUVs, one can tailor the choice to fit specific requirements. Beyond mere transportation, appointing a car can elevate experiences, allowing travelers to explore at their own pace and in their preferred style. In the realm of modern mobility, the freedom and autonomy a hired car bestows are invaluable, transforming journeys into memorable adventures.
                         </p>
-                        <Link href="category/vehicle-sales">
+                        {data ? <Link href="category/vehicle-sales">
                             <button className={`${styles.button} !mt-3 md:max-w-xs`}>Visit More</button>
-                        </Link>
+                        </Link> : <Link href="/login">
+                            <button className={`${styles.button} !mt-3 md:max-w-xs`}>Visit More</button>
+                        </Link>}
                     </div>
                 </div>
 
@@ -276,9 +294,10 @@ Marriage, an age-old institution, weaves two souls into a tapestry of shared dre
                         You can make a difference today
                     </h1>
                     <h1 className="mb-3">There&apos;s a lot more we can do, together</h1>
-                    <Link href="/login">
+                    {data ? null :  <Link href="/login">
                         <button className={`${styles.button} !max-w-xs`}>SIGN UP NOW</button>
-                    </Link>
+                    </Link>}
+                 
                 </div>
             </div>
         </div>
