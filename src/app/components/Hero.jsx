@@ -114,7 +114,7 @@ const Hero = () => {
     return (
         <div>
             <div>
-                <div className="h-[517px] w-full rounded-md overflow-hidden mb-1 flex justify-center items-center bg-[url('https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?cs=srgbdl=pexels-johannes-plenio-1103970.jpg&fm=jpg')] bg-cover">
+                <div className="h-[517px] w-full rounded-md overflow-hidden mb-1 flex justify-center items-center bg-[url('https://i.ibb.co/bdSNDMt/drew-coffman-ll-Wjwo200fo-unsplash.jpg')] bg-cover bg-center">
                     {/* <div className="flex bg-teal-700 gap-3 p-1 rounded">
                         <Link href="category/marriage-s-d">
                             <img
@@ -288,7 +288,7 @@ const Hero = () => {
                 </div> */}
             </div>
 
-            <div className="h-96 w-full rounded-md relative overflow-hidden mb-1 flex justify-center items-center bg-[url('https://media.istockphoto.com/id/1072438832/photo/crowd-of-happy-people-with-arms-outstretched-looking-at-camera.jpg?s=170667a&w=0&k=20&c=W0yBzU3kUdKwko0ijKzJAY3sefUahihjAzlT4zBCr5c=')] bg-cover">
+            <div className="h-96 w-full rounded-md relative overflow-hidden mb-1 flex justify-center items-center bg-[url('https://i.ibb.co/C1f0nQj/20-1081-jasmine-a-photography-stef-shin-57-IMG0890.webp')] bg-cover bg-center">
                 <div className="absolute w-full h-96 top-0 left-0 bg-black opacity-50 z-0 rounded-md"></div>
                 <div className="text-white z-50 flex flex-col justify-center items-center">
                     <h1 className="my-3 text-xl lg:text-2xl font-semibold">
